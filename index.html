@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Public projects and latest writing by Luís Soares.">
+<title>Luís Soares · Projects</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400&display=swap">
+<style>
+/* Layout: one narrow column on squared notebook paper; groups of projects as plain lists, handwriting only for the headings. */
+:root {
+  --paper: #f7f9fb;
+  --grid: #e3e9f0;
+  --ink: #1d2733;
+  --muted: #5d6b7a;
+  --pen: #1f4fb4;
+  --rule: #cfd8e3;
+  --display: "Caveat", "Segoe Print", cursive;
+  --body: "IBM Plex Sans", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --paper: #161b22; --grid: #1f262f; --ink: #e4e9ef; --muted: #98a4b2; --pen: #8fb3ff; --rule: #2d3743; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --paper: #161b22; --grid: #1f262f; --ink: #e4e9ef; --muted: #98a4b2; --pen: #8fb3ff; --rule: #2d3743; color-scheme: dark }
+
+body {
+  margin: 0;
+  background-color: var(--paper);
+  background-image: linear-gradient(var(--grid) 1px, transparent 1px), linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 24px 24px;
+  color: var(--ink);
+  font: 400 16px/1.6 var(--body);
+}
+main {
+  max-width: 44rem;
+  margin: 0 auto;
+  padding-block: 56px 72px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid;
+  gap: 48px;
+}
+header { display: grid; gap: 12px; }
+h1 { font: 700 clamp(3rem, 9vw, 4.5rem)/1 var(--display); margin: 0; color: var(--ink); text-wrap: balance; }
+.lede { margin: 0; max-width: 34rem; color: var(--muted); }
+.pledge {
+  justify-self: start;
+  margin-top: 8px;
+  font: 700 1.6rem/1.2 var(--display);
+  color: var(--pen);
+  transform: rotate(-2deg);
+  border-bottom: 2px solid var(--pen);
+  padding-bottom: 2px;
+}
+.pledge small { display: block; font: 400 0.8rem/1.4 var(--body); color: var(--muted); transform: none; }
+.links { display: flex; flex-wrap: wrap; gap: 16px; font-size: 0.9rem; }
+a { color: var(--pen); text-underline-offset: 3px; }
+a:focus-visible { outline: 2px solid var(--pen); outline-offset: 2px; border-radius: 2px; }
+
+section { display: grid; gap: 8px; }
+h2 { font: 700 2rem/1.1 var(--display); margin: 0; color: var(--pen); }
+ul { list-style: none; margin: 0; padding: 0; }
+li {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2px 16px;
+  padding-block: 14px;
+  border-bottom: 1px dashed var(--rule);
+}
+li > * { min-width: 0; }
+li a { font-weight: 600; font-size: 1.05rem; }
+.meta { font: 400 0.78rem/1.6 var(--mono); color: var(--muted); text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.desc { grid-column: 1 / -1; margin: 0; color: var(--muted); font-size: 0.95rem; }
+footer { font-size: 0.85rem; color: var(--muted); }
+@media (max-width: 480px) {
+  li { grid-template-columns: 1fr; }
+  .meta { text-align: left; }
+}
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Luís Soares</h1>
+    <p class="lede">Software engineer from Portugal. I like clean architecture, tests that read like a user, and small tools that make home life nicer. These are the public projects on my GitHub.</p>
+    <p class="pledge">All of this is hand-written code.<small>Typed by me, line by line.</small></p>
+    <nav class="links"><a href="https://github.com/lsoares">github.com/lsoares</a><a href="https://lsoares.medium.com">lsoares.medium.com</a></nav>
+  </header>
+
+  <section>
+    <h2>Latest writing</h2>
+    <ul>
+      <li><a href="https://lsoares.medium.com/software-development-after-ai-part-i-39f05a9102bb">Software development after AI, Part I</a><span class="meta">Sep 2026</span></li>
+      <li><a href="https://lsoares.medium.com/fundamental-truths-about-software-development-with-or-without-ai-5da74a4be8bf">Software development after AI, Part II: the fundamentals</a><span class="meta">Sep 2026</span></li>
+      <li><a href="https://lsoares.medium.com/steering-a-shared-codebase-without-becoming-blockers-6ababb8df936">Steering a shared codebase without becoming blockers</a><span class="meta">Aug 2026</span></li>
+      <li><a href="https://levelup.gitconnected.com/defining-a-testing-strategy-24f733d822df">Defining a testing strategy</a><span class="meta">Mar 2026</span></li>
+      <li><a href="https://levelup.gitconnected.com/10-coding-myths-from-my-university-degree-6a2cfdd6a3f9">Coding myths from my CS degree</a><span class="meta">Feb 2026</span></li>
+      <li><a href="https://levelup.gitconnected.com/the-smart-way-to-refactor-4d86e31674c4">Smart refactoring</a><span class="meta">Jun 2025</span></li>
+    </ul>
+    <p class="desc"><a href="https://lsoares.medium.com">All articles on Medium</a></p>
+  </section>
+
+  <section>
+    <h2>Lately</h2>
+    <ul>
+      <li><a href="https://github.com/lsoares/codenames">codenames</a><span class="meta">TypeScript · 2026</span><p class="desc">Codenames Pictures as a peer-to-peer web game, built with React, Vite and WebRTC.</p></li>
+      <li><a href="https://github.com/lsoares/mundo-retangulos">mundo-retangulos</a><span class="meta">C · 2025</span><p class="desc">Mundo dos retângulos, a small world of rectangles written in C.</p></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Testing</h2>
+    <ul>
+      <li><a href="https://github.com/lsoares/selenium-testing-library">selenium-testing-library</a><span class="meta">Kotlin · ★ 12</span><p class="desc">Testing Library locators for Selenium, for Java and Kotlin.</p></li>
+      <li><a href="https://github.com/lsoares/playwright-demos">playwright-demos</a><span class="meta">TypeScript · 2024</span><p class="desc">Examples of end-to-end tests with Playwright.</p></li>
+      <li><a href="https://github.com/lsoares/web-servers-for-testing">web-servers-for-testing</a><span class="meta">Kotlin · ★ 2</span><p class="desc">Spinning up real web servers inside tests.</p></li>
+      <li><a href="https://github.com/lsoares/cypress-demo">cypress-demo</a><span class="meta">JavaScript · 2022</span><p class="desc">End-to-end tests with Cypress.</p></li>
+      <li><a href="https://github.com/lsoares/e2e-nightwatchjs-testinglibrary">e2e-nightwatchjs-testinglibrary</a><span class="meta">JavaScript · 2020</span><p class="desc">Nightwatch.js tests using Testing Library queries.</p></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Architecture</h2>
+    <ul>
+      <li><a href="https://github.com/lsoares/clean-architecture-sample">clean-architecture-sample</a><span class="meta">Kotlin · ★ 27</span><p class="desc">A clean architecture sample project in Kotlin.</p></li>
+      <li><a href="https://github.com/lsoares/domain-driven-arch-python">domain-driven-arch-python</a><span class="meta">Python · ★ 2</span><p class="desc">A domain-driven architecture sample project in Python.</p></li>
+      <li><a href="https://github.com/lsoares/template-library-no-js">template-library-no-js</a><span class="meta">Kotlin · 2021</span><p class="desc">Server-side rendering without JavaScript, as extensions to Jsoup.</p></li>
+      <li><a href="https://github.com/lsoares/kotlin-javalin-jte">kotlin-javalin-jte</a><span class="meta">Kotlin · 2023</span><p class="desc">A web app with Javalin and JTE templates.</p></li>
+      <li><a href="https://github.com/lsoares/slack-bot-kotlin-sample">slack-bot-kotlin-sample</a><span class="meta">Kotlin · 2022</span><p class="desc">A Slack bot written in Kotlin.</p></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Around the house &amp; for fun</h2>
+    <ul>
+      <li><a href="https://github.com/lsoares/yeelight-remote-control">yeelight-remote-control</a><span class="meta">C# · ★ 6</span><p class="desc">A remote control for Yeelight lights.</p></li>
+      <li><a href="https://github.com/lsoares/iris-nos-remote">iris-nos-remote</a><span class="meta">JavaScript · ★ 7</span><p class="desc">Control the IRIS TV box from Chrome.</p></li>
+      <li><a href="https://github.com/lsoares/epg-android-sapo">epg-android-sapo</a><span class="meta">Java · 2016</span><p class="desc">Android notifications for your TV programmes.</p></li>
+      <li><a href="https://github.com/lsoares/my-musical-journal">my-musical-journal</a><span class="meta">TypeScript · 2019</span><p class="desc">Keeping track of musical practice.</p></li>
+      <li><a href="https://github.com/lsoares/memory-game">memory-game</a><span class="meta">JavaScript · 2019</span><p class="desc">The classic memory card game in vanilla JavaScript.</p></li>
+      <li><a href="https://github.com/lsoares/advent-of-code-2020">advent-of-code-2020</a><span class="meta">Kotlin · 2020</span><p class="desc">Advent of Code puzzles, also <a href="https://github.com/lsoares/adventCode19">2019</a>.</p></li>
+    </ul>
+  </section>
+
+  <footer>Every project above was written by hand. Stars and years come from GitHub and articles from Medium, November 2026.</footer>
+</main>
+</body>
+</html>
